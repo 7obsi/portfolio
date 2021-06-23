@@ -1,0 +1,138 @@
+/*****************************************************************************
+  Common Elements 
+ *****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+/*font-family: 'Cormorant Garamond', serif;*/
+
+:root {
+  --serif-font: Cormorant Garamond, 'Cormorant Garamond', serif;
+  --bg-color: #E6C2C2;
+  --primary-color: black;
+}
+
+body {
+  font-family: var(--serif-font);
+  font-size: 200%;
+  line-height: 2rem;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  margin: 1rem 4rem 2rem 4rem;
+}
+
+/* vertical line */
+hr.v-line {
+  border: 1px solid black;
+}
+
+
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.first-row-right a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+}
+
+.first-row-right a:hover {
+    color: blue;
+}
+
+.square {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1.5rem;
+    border: 4px solid red;
+    animation: rotate 3s infinite linear;
+}
+
+.myRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.myRowCenter{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+}
+
+.vi{
+    background-color: violet;
+    height: 5px;
+    min-width: 100%;
+}
+.in{
+    background-color: indigo;
+    height: 5px;
+    width: 100%;
+}
+.bl{
+    background-color: blue;
+    height: 5px;
+    width: 100%;
+}
+.gr{
+    background-color: green;
+    height: 5px;
+    width: 100%;
+}
+.ye{
+    background-color: yellow;
+    height: 5px;
+    width: 100%;
+}
+.or{
+    background-color: orange;
+    height: 5px;
+    width: 100%;
+}
+.re{
+    background-color: red;
+    height: 5px;
+    width: 100%;
+}
+
+.rainbow-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about-link{
+    display: inline;
+}
+
+.about-link-mobile{
+    display: none;
+}
+
+/* If the screen size is 600px wide or less, hide the element */
+@media screen and (max-width: 600px) {
+    .about-link{
+        display: none;
+    }
+    .about-link-mobile{
+        display: inline;
+        text-decoration: none;
+        align-self: center;
+        justify-self: center;
+    }
+    main {
+        margin: 1rem 2rem 0rem 2rem;
+    }
+}
