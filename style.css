@@ -4,15 +4,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 /*font-family: 'Cormorant Garamond', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
 
 :root {
   --serif-font: Cormorant Garamond, 'Cormorant Garamond', serif;
+  --main-font: Quicksand, 'Quicksand', sans-serif;
   --bg-color: #E6C2C2;
   --primary-color: black;
+    cursor: crosshair;
 }
 
 body {
-  font-family: var(--serif-font);
+  font-family: var(--main-font);
   font-size: 200%;
   line-height: 2rem;
   background-color: var(--bg-color);
@@ -22,7 +26,7 @@ body {
 }
 
 main {
-  margin: 1rem 4rem 2rem 4rem;
+  margin: 3rem 3rem 3rem 3rem;
 }
 
 /* vertical line */
@@ -37,22 +41,31 @@ hr.v-line {
     color: black;
 }
 
-.first-row-right a {
-    text-decoration: none;
-    color: black;
-    margin-left: 1em;
+.first-row-right{
+    cursor: none;
 }
 
-.first-row-right a:hover {
-    color: blue;
+.first-row-right a {
+    text-decoration: none;
+    cursor: none;
+    color: black;
+}
+
+.first-row-right:hover {
+    background-color: blue;
 }
 
 .square {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: 1.5rem;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 3rem;
+    /*
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+    */
+    position: fixed;
     border: 4px solid red;
-    animation: rotate 3s infinite linear;
+    animation: rotate 10s infinite linear;
 }
 
 .myRow {
@@ -136,3 +149,131 @@ hr.v-line {
         margin: 1rem 2rem 0rem 2rem;
     }
 }
+.frame {
+    border-style: solid;
+    border-width: 4px;
+    padding: 5px;
+    display: inline;
+}
+
+.logo{
+    font-weight: 600;
+}
+
+.logo:hover{
+    animation: changeColor 1.2s linear;
+    animation-iteration-count: infinite;
+    cursor: none;
+}
+
+@keyframes changeColor {
+    0% {
+        background-image: linear-gradient(50deg, #CC99C9,#9EC1CF,#9EE09E,#FDFD97,#FEB144,#FF6663);
+    }
+    9% {
+        background-image: linear-gradient(50deg, #FF6663,#CC99C9,#9EC1CF,#9EE09E,#FDFD97,#FEB144);
+    }
+    18% {
+        background-image: linear-gradient(50deg, #FEB144,#FF6663,#CC99C9,#9EC1CF,#9EE09E,#FDFD97);
+    }
+    27% {
+        background-image: linear-gradient(50deg, #FDFD97,#FEB144,#FF6663,#CC99C9,#9EC1CF,#9EE09E);
+    }
+    36% {
+        background-image: linear-gradient(50deg, #9EE09E,#FDFD97,#FEB144,#FF6663,#CC99C9,#9EC1CF);
+    }
+    45% {
+        background-image: linear-gradient(50deg, #9EC1CF,#9EE09E,#FDFD97,#FEB144,#FF6663,#CC99C9);
+    }
+    54% {
+        background-image: linear-gradient(50deg, #CC99C9,#9EC1CF,#9EE09E,#FDFD97,#FEB144,#FF6663);
+    }
+    64% {
+        background-image: linear-gradient(50deg, #FF6663,#CC99C9,#9EC1CF,#9EE09E,#FDFD97,#FEB144);
+    }
+    72% {
+        background-image: linear-gradient(50deg, #FEB144,#FF6663,#CC99C9,#9EC1CF,#9EE09E,#FDFD97);
+    }
+    81% {
+        background-image: linear-gradient(50deg, #FDFD97,#FEB144,#FF6663,#CC99C9,#9EC1CF,#9EE09E);
+    }
+    90% {
+        background-image: linear-gradient(50deg, #9EE09E,#FDFD97,#FEB144,#FF6663,#CC99C9,#9EC1CF);
+    }
+    100% {
+        background-image: linear-gradient(50deg, #9EC1CF,#9EE09E,#FDFD97,#FEB144,#FF6663,#CC99C9);
+    }
+}
+
+
+.jump
+{
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.jump a{
+    text-decoration: none;
+    color: black;
+}
+.jump span {
+    display: inline-block;
+    animation: none;
+}
+
+.jump:hover span:nth-child(4n+1) {
+    -webkit-animation: bounce 0.75s infinite linear;
+    -moz-animation: bounce 0.75s infinite linear;
+    animation: bounce 0.75s infinite linear; }
+
+.jump:hover span:nth-child(4n+2) {
+    -webkit-animation: bounce 0.75s infinite linear 0.1s;
+    -moz-animation: bounce 0.75s infinite linear 0.1s;
+    animation: bounce 0.75s infinite linear 0.1s; }
+
+.jump:hover span:nth-child(4n+3) {
+    -webkit-animation: bounce 0.75s infinite linear 0.2s;
+    -moz-animation: bounce 0.75s infinite linear 0.2s;
+    animation: bounce 0.75s infinite linear 0.2s; }
+
+.jump:hover span:nth-child(4n) {
+    -webkit-animation: bounce 0.75s infinite linear 0.3s;
+    -moz-animation: bounce 0.75s infinite linear 0.3s;
+    animation: bounce 0.75s infinite linear 0.3s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 100% {
+        -webkit-transform: translateY(0); }
+    25% {
+        -webkit-transform: translateY(-15%); }
+    75% {
+        -webkit-transform: translateY(15%); } }
+
+@-moz-keyframes bounce {
+    0%, 100% {
+        -moz-transform: translateY(0); }
+    25% {
+        -moz-transform: translateY(-15%); }
+    75% {
+        -moz-transform: translateY(15%); } }
+
+@keyframes bounce {
+    0%, 100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0); }
+    25% {
+        -webkit-transform: translateY(-15%);
+        -moz-transform: translateY(-15%);
+        -ms-transform: translateY(-15%);
+        -o-transform: translateY(-15%);
+        transform: translateY(-15%); }
+    75% {
+        -webkit-transform: translateY(15%);
+        -moz-transform: translateY(15%);
+        -ms-transform: translateY(15%);
+        -o-transform: translateY(15%);
+        transform: translateY(15%); } }
